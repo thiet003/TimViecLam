@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.PersonFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_reset"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="-2dp"
+        android:layout_marginRight="-10dp"
+        android:orientation="vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/person_img_user"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:src="@drawable/demo2"
+            app:riv_corner_radius="50dp" />
+
+        <TextView
+            android:id="@+id/person_txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thiết Vũ"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/person_txt_address"
+                android:drawablePadding="3dp"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/location_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vietnam"/>
+            <TextView
+                android:id="@+id/person_txt_gender"
+                android:drawablePadding="3dp"
+                android:drawableLeft="@drawable/gender_icon_men"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/person_btn_editInfo"
+            android:drawableLeft="@drawable/edit18_icon"
+            android:drawableTint="#ffffff"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/btn_reset"
+            app:backgroundTint = "@null"
+            android:layout_marginBottom="30dp"
+            android:text="Sửa thông tin"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/person_card_introduce"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:textColor="#000000"
+                            android:layout_height="wrap_content"
+                            android:text="Giới thiệu bản thân"/>
+                        <ImageView
+                            android:id="@+id/person_icon_editIntroduce"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="115dp"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:src="@drawable/edit18_icon"
+
+                            app:tint="#22a0d6" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/person_txt_introduce"
+                        android:drawableLeft="@drawable/add_icon"
+                        android:drawableTint="#22a0d6"
+                        android:layout_marginLeft="5dp"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thêm giới thiệu"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="#22a0d6"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/person_card_exprience"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:textColor="#000000"
+                            android:layout_height="wrap_content"
+                            android:text="Kinh nghiệm làm việc"/>
+                        <ImageView
+                            android:id="@+id/person_icon_editExprience"
+                            android:layout_marginLeft="88dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:src="@drawable/edit18_icon"
+
+                            app:tint="#22a0d6" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/person_txt_exprience"
+                        android:drawableLeft="@drawable/add_icon"
+                        android:drawableTint="#22a0d6"
+                        android:layout_marginLeft="5dp"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thêm kinh nghiệm"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="#22a0d6"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/person_card_education"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:textColor="#000000"
+                            android:layout_height="wrap_content"
+                            android:text="Học vấn"/>
+                        <ImageView
+                            android:id="@+id/person_icon_editEducation"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="205dp"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:src="@drawable/edit18_icon"
+
+                            app:tint="#22a0d6" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/person_txt_education"
+                        android:drawableLeft="@drawable/add_icon"
+                        android:drawableTint="#22a0d6"
+                        android:layout_marginLeft="5dp"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thêm học vấn"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="#22a0d6"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/person_card_skill"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:textColor="#000000"
+                            android:layout_height="wrap_content"
+                            android:text="Kĩ năng"/>
+                        <ImageView
+                            android:id="@+id/person_icon_editSkill"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="205dp"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:src="@drawable/edit18_icon"
+
+                            app:tint="#22a0d6" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/person_txt_skill"
+                        android:drawableLeft="@drawable/add_icon"
+                        android:drawableTint="#22a0d6"
+                        android:layout_marginLeft="5dp"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thêm kĩ năng"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="#22a0d6"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/person_card_prize"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="20dp"
+                            android:textColor="#000000"
+                            android:layout_height="wrap_content"
+                            android:text="Giải thưởng"/>
+                        <ImageView
+                            android:id="@+id/person_icon_editPrize"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="170dp"
+                            android:layout_width="23dp"
+                            android:layout_height="23dp"
+                            android:src="@drawable/edit18_icon"
+
+                            app:tint="#22a0d6" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/person_txt_prize"
+                        android:drawableLeft="@drawable/add_icon"
+                        android:drawableTint="#22a0d6"
+                        android:layout_marginLeft="5dp"
+                        android:drawablePadding="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Thêm giải thưởng"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:textColor="#22a0d6"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

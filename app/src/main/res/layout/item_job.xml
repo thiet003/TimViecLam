@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true"
+    android:layout_marginTop="1dp"
+    android:layout_marginEnd="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear_cart_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:paddingLeft="5dp"
+                android:id="@+id/img_job"
+                android:layout_width="70dp"
+                android:layout_centerVertical="true"
+                android:layout_height="70dp"
+                android:src="@drawable/demo"/>
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:id="@+id/tv_job_name"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="CÔNG TY SƠN VIỆT ÚC TUYỂN NHÂN VIÊN KHO"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_toStartOf="@id/img_favorite_job"
+            android:layout_below="@id/linear_cart_1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:id="@+id/tv_job_salary"
+                android:layout_height="wrap_content"
+                android:text="7.000.000 đ - 10.000.000 đ/tháng"
+                android:textSize="14sp"
+                android:textColor="#a442f5"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:drawableTint="#03fc4e"
+                android:drawableLeft="@drawable/location2_icon"
+                android:drawablePadding="5dp"
+                android:id="@+id/tv_job_address"
+                android:layout_height="wrap_content"
+                android:text="Quận Hà Đông, Hà Nội"
+                android:textSize="13sp"
+                android:textColor="#000000" />
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/group_icon"
+                android:drawableTint="#03fc4e"
+                android:drawablePadding="5dp"
+                android:id="@+id/tv_job_count"
+                android:layout_height="wrap_content"
+                android:text="Số lượng: 2"
+                android:textSize="13sp"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:drawableLeft="@drawable/time_icon"
+                android:drawableTint="#03fc4e"
+                android:drawablePadding="5dp"
+                android:id="@+id/tv_job_updateTime"
+                android:layout_height="wrap_content"
+                android:text="Cập nhật ngày hôm nay"
+                android:textSize="13sp"
+                android:textStyle="bold|italic"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img_favorite_job"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/favorite_border_icon"/>
+        
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
