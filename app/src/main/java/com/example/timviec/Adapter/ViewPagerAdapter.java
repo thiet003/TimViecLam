@@ -9,7 +9,6 @@ import com.example.timviec.Fragment.HomeFragment;
 import com.example.timviec.Fragment.MyWorkFragment;
 import com.example.timviec.Fragment.NotionFragment;
 import com.example.timviec.Fragment.PersonFragment;
-import com.example.timviec.Fragment.SearchFragment;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
@@ -19,25 +18,28 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
+        Fragment item1 = new HomeFragment();
+        Fragment item2 = new MyWorkFragment();
+        Fragment item3 = new NotionFragment();
+        Fragment item4 = new PersonFragment();
+
         switch (position)
         {
             case 0:
-                return new HomeFragment();
+                return item1;
             case 1:
-                return new SearchFragment();
+                return item2;
             case 2:
-                return new MyWorkFragment();
+                return item3;
             case 3:
-                return new NotionFragment();
-            case 4:
-                return new PersonFragment();
+                return item4;
             default:
-                return new HomeFragment();
+                return item1;
         }
     }
 
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
 }

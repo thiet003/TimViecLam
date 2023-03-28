@@ -6,15 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".Activities.MainActivity">
     
-    <com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/AHBottomNavigationViewPager"
         android:layout_above="@+id/AHBottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     
-    <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/AHBottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/menu_bottom_navigation"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/black"/>
 </RelativeLayout>
