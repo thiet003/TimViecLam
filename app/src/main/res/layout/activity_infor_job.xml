@@ -457,6 +457,7 @@
             android:src="@drawable/favorite_border_icon"
             app:tint="#db6b8d" />
         <TextView
+            android:id="@+id/tWeb_btn"
             android:textColor="@color/black"
             android:background="@drawable/circle_infor2"
             android:layout_width="wrap_content"

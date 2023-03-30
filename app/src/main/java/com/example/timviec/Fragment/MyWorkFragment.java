@@ -36,7 +36,7 @@ public class MyWorkFragment extends Fragment {
         tabLayout = mView.findViewById(R.id.mywork_tablayout);
         viewPager = mView.findViewById(R.id.mywork_viewpager);
         MyWorkPageAdapter myWorkPageAdapter = new MyWorkPageAdapter(getChildFragmentManager());
-        myWorkPageAdapter.addFragment(new Work_FavoriteFragment(), "Đã lưu");
+        myWorkPageAdapter.addFragment(new Work_FavoriteFragment(), "Yêu thích");
         myWorkPageAdapter.addFragment(new Work_RecuitmentFragment(), "Đã ứng tuyển");
         viewPager.setAdapter(myWorkPageAdapter);
         tabLayout.setupWithViewPager(viewPager);

@@ -15,27 +15,61 @@
         android:layout_marginLeft="-2dp"
         android:layout_marginRight="-10dp"
         android:orientation="vertical">
-
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/person_img_user"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:padding="5dp"
-            android:src="@drawable/demo2"
-            app:riv_corner_radius="50dp" />
-
-        <TextView
-            android:id="@+id/person_txt_name"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Thiết Vũ"
-            android:textSize="20dp"
-            android:textColor="#ffffff"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold"/>
+            android:orientation="horizontal">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/person_img_user"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:padding="5dp"
+                android:src="@drawable/anh2"
+                app:riv_corner_radius="50dp" />
+            <TextView
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:id="@+id/person_btn_editInfo"
+                android:drawableLeft="@drawable/edit18_icon"
+                android:drawableTint="#ffffff"
+                android:textColor="@color/white"
+                android:layout_marginLeft="135dp"
+                android:background="@drawable/btn_resets"
+                app:backgroundTint = "@null"
+                android:drawablePadding="5dp"
+                android:text="Sửa thông tin"
+                android:textAllCaps="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/person_txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thiết"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/person_txt_surname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vũ"
+                android:textSize="20dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
@@ -58,26 +92,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nam"/>
+
         </LinearLayout>
 
-        <Button
-            android:id="@+id/person_btn_editInfo"
-            android:drawableLeft="@drawable/edit18_icon"
-            android:drawableTint="#ffffff"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/btn_reset"
-            app:backgroundTint = "@null"
-            android:layout_marginBottom="30dp"
-            android:text="Sửa thông tin"
-            android:textAllCaps="false"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -96,12 +120,14 @@
                 app:cardUseCompatPadding="true">
 
                 <LinearLayout
+                    android:paddingBottom="10dp"
                     android:layout_marginLeft="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     >
                     <LinearLayout
+                        android:layout_marginBottom="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -119,23 +145,31 @@
                             android:layout_width="23dp"
                             android:layout_height="23dp"
                             android:src="@drawable/edit18_icon"
-
                             app:tint="#22a0d6" />
                     </LinearLayout>
                     <TextView
-                        android:id="@+id/person_txt_introduce"
+                        android:id="@+id/person_txt_introduceADD"
                         android:drawableLeft="@drawable/add_icon"
-                        android:drawableTint="#22a0d6"
+                        android:drawableTint="#f051ab"
                         android:layout_marginLeft="5dp"
                         android:drawablePadding="10dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_width="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="20dp"
                         android:layout_height="wrap_content"
                         android:text="Thêm giới thiệu"
                         android:textStyle="bold"
                         android:textSize="16dp"
-                        android:textColor="#22a0d6"
+                        android:textColor="#f051ab"
+                        />
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/person_txt_introduce"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -183,7 +217,7 @@
                     <TextView
                         android:id="@+id/person_txt_exprience"
                         android:drawableLeft="@drawable/add_icon"
-                        android:drawableTint="#22a0d6"
+                        android:drawableTint="#f051ab"
                         android:layout_marginLeft="5dp"
                         android:drawablePadding="10dp"
                         android:layout_marginTop="20dp"
@@ -193,7 +227,7 @@
                         android:text="Thêm kinh nghiệm"
                         android:textStyle="bold"
                         android:textSize="16dp"
-                        android:textColor="#22a0d6"
+                        android:textColor="#f051ab"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -241,7 +275,7 @@
                     <TextView
                         android:id="@+id/person_txt_education"
                         android:drawableLeft="@drawable/add_icon"
-                        android:drawableTint="#22a0d6"
+                        android:drawableTint="#f051ab"
                         android:layout_marginLeft="5dp"
                         android:drawablePadding="10dp"
                         android:layout_marginTop="20dp"
@@ -251,7 +285,7 @@
                         android:text="Thêm học vấn"
                         android:textStyle="bold"
                         android:textSize="16dp"
-                        android:textColor="#22a0d6"
+                        android:textColor="#f051ab"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -299,7 +333,7 @@
                     <TextView
                         android:id="@+id/person_txt_skill"
                         android:drawableLeft="@drawable/add_icon"
-                        android:drawableTint="#22a0d6"
+                        android:drawableTint="#f051ab"
                         android:layout_marginLeft="5dp"
                         android:drawablePadding="10dp"
                         android:layout_marginTop="20dp"
@@ -309,7 +343,7 @@
                         android:text="Thêm kĩ năng"
                         android:textStyle="bold"
                         android:textSize="16dp"
-                        android:textColor="#22a0d6"
+                        android:textColor="#f051ab"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -357,7 +391,7 @@
                     <TextView
                         android:id="@+id/person_txt_prize"
                         android:drawableLeft="@drawable/add_icon"
-                        android:drawableTint="#22a0d6"
+                        android:drawableTint="#f051ab"
                         android:layout_marginLeft="5dp"
                         android:drawablePadding="10dp"
                         android:layout_marginTop="20dp"
@@ -367,7 +401,7 @@
                         android:text="Thêm giải thưởng"
                         android:textStyle="bold"
                         android:textSize="16dp"
-                        android:textColor="#22a0d6"
+                        android:textColor="#f051ab"
                         />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.timviec.Activities.InforJobActivity;
 import com.example.timviec.Activities.MainActivity;
@@ -35,6 +36,7 @@ public class Work_FavoriteFragment extends Fragment {
     private List<Job> mList;
     private JobAdapter jobAdapter;
     MainActivity mainActivity;
+    private TextView tv_fvt;
     private JobDetail mJobDetail;
     public Work_FavoriteFragment() {
         // Required empty public constructor
@@ -54,6 +56,9 @@ public class Work_FavoriteFragment extends Fragment {
         mView = inflater.inflate(R.layout.fragment_work__favorite, container, false);
         mList = new ArrayList<>();
         rcv_job_fvt = mView.findViewById(R.id.rcv_job_fvt);
+        tv_fvt = mView.findViewById(R.id.tv_fvt);
+
+        tv_fvt.setText("Việc bạn yêu thích");
         mainActivity = (MainActivity) getActivity();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mainActivity);
         rcv_job_fvt.setLayoutManager(linearLayoutManager);
@@ -95,6 +100,8 @@ public class Work_FavoriteFragment extends Fragment {
     private void onClicktoInforActivity(Job job)
     {
         String url = job.getLink();
+        List<JobFavorite> jobFavorites = JobFavoriteDatabase.getInstance(mainActivity).jobFavoriteDAO().checkFavoriteJob(url);
+        boolean checker = jobFavorites != null && !jobFavorites.isEmpty();
         System.out.println(url);
         String name = job.getName();
         String img = job.getResourceId();
@@ -117,6 +124,8 @@ public class Work_FavoriteFragment extends Fragment {
                 Intent intent = new Intent(mainActivity, InforJobActivity.class);
                 Bundle bundle= new Bundle();
                 bundle.putSerializable("jobs",newJob);
+                bundle.putBoolean("checker",checker);
+                bundle.putString("url",url);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

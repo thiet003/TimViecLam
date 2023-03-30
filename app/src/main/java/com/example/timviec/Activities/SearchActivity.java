@@ -40,11 +40,7 @@ public class SearchActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         rcv_jobs.setLayoutManager(linearLayoutManager);
         jobAdapter = new JobAdapter();
-        try {
-            jobAdapter.setData(getListJob());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        jobAdapter.setData(newList);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

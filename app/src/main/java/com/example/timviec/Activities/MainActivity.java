@@ -2,32 +2,27 @@ package com.example.timviec.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ImageView;
 
-import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
-import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
-import com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager;
-import com.aurelhubert.ahbottomnavigation.notification.AHNotification;
-import com.example.timviec.Adapter.JobAdapter;
 import com.example.timviec.DataFromInternet;
-import com.example.timviec.Fragment.HomeFragment;
+import com.example.timviec.JobSingleton;
 import com.example.timviec.Model.Job;
+import com.example.timviec.Model.JobRecuiment;
 import com.example.timviec.R;
 import com.example.timviec.Adapter.ViewPagerAdapter;
 import com.example.timviec.database.JobDatabase;
-import com.example.timviec.my_interface.IClickItemJob;
+import com.example.timviec.database.JobRecuimentDAO;
+import com.example.timviec.database.JobRecuimentDatabase;
+import com.example.timviec.my_interface.IClickRecuimentJob;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IClickRecuimentJob {
 
     public List<Job> getmList() {
         return mList;
@@ -42,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
     private BottomNavigationView navigationView;
     private ViewPager viewPager;
     private ViewPagerAdapter adapter;
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,6 +123,8 @@ public class MainActivity extends AppCompatActivity {
         }
         System.out.println(mList.size());
         JobDatabase.getInstance(MainActivity.this).jobDAO().deleteAllJob();
+
+
     }
     private void setupViewPager() {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(),FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
@@ -161,4 +164,8 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    @Override
+    public void onClickRecuiment(Job job) {
+
+    }
 }

@@ -14,6 +14,12 @@
         android:theme="@style/Theme.TimViec"
         tools:targetApi="31">
         <activity
+            android:name=".EditIntroduceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activities.InforJobActivity"
             android:exported="false" />
         <activity

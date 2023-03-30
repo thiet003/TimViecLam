@@ -26,9 +26,11 @@ import com.example.timviec.DataFromInternet;
 import com.example.timviec.DataFromInternet2;
 import com.example.timviec.Model.Job;
 import com.example.timviec.Model.JobDetail;
+import com.example.timviec.Model.JobFavorite;
 import com.example.timviec.R;
 import com.example.timviec.Activities.SearchActivity;
 import com.example.timviec.database.JobDatabase;
+import com.example.timviec.database.JobFavoriteDatabase;
 import com.example.timviec.my_interface.IClickFavoriteJobListener;
 import com.example.timviec.my_interface.IClickItemJob;
 
@@ -230,6 +232,8 @@ public class HomeFragment extends Fragment  {
     {
         String url = job.getLink();
         System.out.println(url);
+        List<JobFavorite> jobFavorites = JobFavoriteDatabase.getInstance(mainActivity).jobFavoriteDAO().checkFavoriteJob(url);
+        boolean checker = jobFavorites != null && !jobFavorites.isEmpty();
         String name = job.getName();
         String img = job.getResourceId();
         String salary = job.getSalary();
@@ -251,6 +255,8 @@ public class HomeFragment extends Fragment  {
                 Intent intent = new Intent(mainActivity, InforJobActivity.class);
                 Bundle bundle= new Bundle();
                 bundle.putSerializable("jobs",newJob);
+                bundle.putBoolean("checker",checker);
+                bundle.putString("url",url);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
