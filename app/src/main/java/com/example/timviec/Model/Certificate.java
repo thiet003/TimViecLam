@@ -1,6 +1,8 @@
 package com.example.timviec.Model;
 
-public class Certificate {
+import java.io.Serializable;
+
+public class Certificate implements Serializable {
     String certificate_time,certificate_detail;
 
     public String getCertificate_time() {

@@ -48,4 +48,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.15.0'
     implementation "androidx.room:room-runtime:2.5.0"
     annotationProcessor "androidx.room:room-compiler:2.5.0"
+    implementation 'com.itextpdf:itextpdf:5.5.13.2'
+    implementation 'com.github.tejpratap46:PDFCreatorAndroid:3.0.2'
 }

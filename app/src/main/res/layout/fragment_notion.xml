@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,37 +17,24 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:gravity="center"/>
-<!--        <com.sa90.materialarcmenu.ArcMenu-->
-<!--            android:id="@+id/arc_menu"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            app:menu_scr="@android:drawable/ic_input_add"-->
-<!--            app:menu_open="arc_left"-->
-<!--            android:layout_alignParentEnd="true"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            android:layout_margin="20dp">-->
-<!--            <LinearLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:orientation="horizontal">-->
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="Tạo CV mới"-->
-<!--                    android:layout_gravity="center_vertical"-->
-<!--                    android:textColor="@color/black"-->
-<!--                    android:layout_marginEnd="5dp"/>-->
-<!--                <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--                    android:id="@+id/fab1"-->
-<!--                    app:fabSize="mini"-->
-<!--                    android:backgroundTint="#03d7fc"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:src="@drawable/add_icon_white"-->
-<!--                    app:fab_progress_color="@color/white"-->
-<!--                    android:layout_height="wrap_content" />-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"
+        />
 
-<!--            </LinearLayout>-->
+    <TextView
+        android:id="@+id/btn_CreatCV"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bnt_addcv"
+        android:text="Tạo CV"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-<!--        </com.sa90.materialarcmenu.ArcMenu>-->
-
-</RelativeLayout>
+</LinearLayout>

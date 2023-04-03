@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EditCVEduActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_alignParentTop="true"
+        android:id="@+id/edtcvexp_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sửa CV"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:textColor="@color/black"/>
+    <View
+        android:id="@+id/editcvexp_v1"
+        android:layout_alignBottom="@+id/edtcvexp_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd"/>
+    <LinearLayout
+        android:layout_marginTop="53dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_margin="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kinh nghiệm"
+            android:textSize="18dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/editcvexp_rcvExp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/editcvexp_deleteall"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/add_skill"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="150dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:text="Xóa tất cả"/>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:id="@+id/editcvexp_add"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:background="@drawable/add_skill"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="150dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:text="Thêm kinh nghiệm"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/editcvexp_save"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="@drawable/tv_btn_save"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lưu thông tin"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+
+</RelativeLayout>

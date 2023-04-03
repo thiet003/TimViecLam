@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toolbar;
 
+import com.bumptech.glide.Glide;
 import com.example.timviec.Activities.InforJobActivity;
 import com.example.timviec.Activities.MainActivity;
 import com.example.timviec.Adapter.JobAdapter;
@@ -27,12 +29,15 @@ import com.example.timviec.DataFromInternet2;
 import com.example.timviec.Model.Job;
 import com.example.timviec.Model.JobDetail;
 import com.example.timviec.Model.JobFavorite;
+import com.example.timviec.Model.User;
 import com.example.timviec.R;
 import com.example.timviec.Activities.SearchActivity;
 import com.example.timviec.database.JobDatabase;
 import com.example.timviec.database.JobFavoriteDatabase;
+import com.example.timviec.database.UserDatabase;
 import com.example.timviec.my_interface.IClickFavoriteJobListener;
 import com.example.timviec.my_interface.IClickItemJob;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -41,6 +46,8 @@ import java.util.List;
 
 
 public class HomeFragment extends Fragment  {
+    RoundedImageView img_user;
+    private TextView userFactname;
     public static List<Job> mainListJob,list1,list2,list3,list4,list5,list6;
     private LinearLayout listPages;
     private TextView page1,page2,page3,page4,page5,page6;
@@ -75,6 +82,21 @@ public class HomeFragment extends Fragment  {
         page5 = mView.findViewById(R.id.page5);
         page6 = mView.findViewById(R.id.page6);
         listPages = mView.findViewById(R.id.listPage);
+        userFactname = mView.findViewById(R.id.user_factName);
+        img_user = mView.findViewById(R.id.img_user);
+        mainActivity = (MainActivity) getActivity();
+        List<User> listUser = UserDatabase.getInstance(mainActivity).userDAO().checkUser("thietdong264");
+        User user = listUser.get(0);
+        String name = user.getFactName() + " "+user.getSurName();
+        userFactname.setText(name);
+        Uri uri = Uri.parse(user.getImgUri());
+        if (getActivity() != null && !getActivity().isDestroyed()){
+            // Sử dụng Glide để tải ảnh vào ImageView
+            Glide.with(mainActivity)
+                    .load(uri)
+                    .into(img_user);
+        }
+
 
         home_toolbar = mView.findViewById(R.id.home_toolbar);
         toSearchActivity =mView.findViewById(R.id.toSearchActivity);
@@ -82,7 +104,6 @@ public class HomeFragment extends Fragment  {
 
         rcv_job = mView.findViewById(R.id.rcv_job);
 
-        mainActivity = (MainActivity) getActivity();
         jobAdapter = new JobAdapter();
         toSearchActivity.setOnClickListener(new View.OnClickListener() {
             @Override

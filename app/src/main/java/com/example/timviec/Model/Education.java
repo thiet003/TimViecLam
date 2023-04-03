@@ -1,6 +1,8 @@
 package com.example.timviec.Model;
 
-public class Education {
+import java.io.Serializable;
+
+public class Education implements Serializable {
     String education_school,education_time, education_degree,education_detail;
 
     public String getEducation_school() {

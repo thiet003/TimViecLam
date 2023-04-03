@@ -1,6 +1,8 @@
 package com.example.timviec.Model;
 
-public class Activity {
+import java.io.Serializable;
+
+public class Activity implements Serializable {
     String activity_name,activity_time,activity_role,activity_detail;
 
     public String getActivity_name() {

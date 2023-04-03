@@ -23,4 +23,6 @@ public interface JobRecuimentDAO {
 
     @Query("DELETE FROM jobRecuiment")
     void deteleAll();
+    @Query("SELECT COUNT(*) FROM jobRecuiment")
+    int getJRCount();
 }

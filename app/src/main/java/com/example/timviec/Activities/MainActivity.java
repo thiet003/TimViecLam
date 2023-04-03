@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.ContentResolver;
+import android.content.res.Resources;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -12,11 +15,14 @@ import com.example.timviec.DataFromInternet;
 import com.example.timviec.JobSingleton;
 import com.example.timviec.Model.Job;
 import com.example.timviec.Model.JobRecuiment;
+import com.example.timviec.Model.User;
 import com.example.timviec.R;
 import com.example.timviec.Adapter.ViewPagerAdapter;
 import com.example.timviec.database.JobDatabase;
 import com.example.timviec.database.JobRecuimentDAO;
 import com.example.timviec.database.JobRecuimentDatabase;
+import com.example.timviec.database.UserDAO;
+import com.example.timviec.database.UserDatabase;
 import com.example.timviec.my_interface.IClickRecuimentJob;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -123,6 +129,20 @@ public class MainActivity extends AppCompatActivity implements IClickRecuimentJo
         }
         System.out.println(mList.size());
         JobDatabase.getInstance(MainActivity.this).jobDAO().deleteAllJob();
+
+        //Check user
+        List<User> listUser = UserDatabase.getInstance(MainActivity.this).userDAO().checkUser("thietdong264");
+        if(listUser==null || listUser.isEmpty())
+        {
+            Resources resources = getResources();
+            Uri imageUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" +
+                    resources.getResourcePackageName(R.drawable.demo2) + '/' +
+                    resources.getResourceTypeName(R.drawable.demo2) + '/' +
+                    resources.getResourceEntryName(R.drawable.demo2));
+            String uri = imageUri.toString();
+            User user = new User("thietdong264","User",uri,"Name","Not found","Không xác định","Chưa cập nhật","Chưa cập nhật","Chưa cập nhật");
+            UserDatabase.getInstance(MainActivity.this).userDAO().insertUser(user);
+        }
 
 
     }

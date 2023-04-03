@@ -25,4 +25,6 @@ public interface JobFavoriteDAO {
 
     @Query("DELETE FROM jobFavorite")
     void deteleAll();
+    @Query("SELECT COUNT(*) FROM jobFavorite")
+    int getJFCount();
 }

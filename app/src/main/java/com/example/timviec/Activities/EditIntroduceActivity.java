@@ -1,4 +1,4 @@
-package com.example.timviec;
+package com.example.timviec.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import com.example.timviec.Activities.MainActivity;
+import com.example.timviec.R;
 
 public class EditIntroduceActivity extends AppCompatActivity {
     private ImageView back;

@@ -1,6 +1,8 @@
 package com.example.timviec.Model;
 
-public class Skill {
+import java.io.Serializable;
+
+public class Skill implements Serializable {
     private String name_skill;
 
     public String getName_skill() {

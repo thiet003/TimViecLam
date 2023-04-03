@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EditCVSkills2Activity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sửa CV"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:textColor="@color/black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd"/>
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_margin="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hoạt động"
+            android:textSize="18dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/editacti_edtname"
+            android:drawableLeft="@drawable/school24"
+            android:drawablePadding="20dp"
+            android:hint="Tên tổ chức"
+            android:gravity="left|top"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="#5a5a5a"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edt_cv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/editcvacti_w1"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#eb3b41"
+            android:text="Không được để trống."/>
+        <EditText
+            android:id="@+id/editacti_edtrole"
+            android:drawableLeft="@drawable/univer_icon"
+            android:drawablePadding="20dp"
+            android:hint="Vị trí tham gia"
+            android:gravity="left|top"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="#5a5a5a"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edt_cv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/editcvacti_w2"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#eb3b41"
+            android:text="Không được để trống."/>
+        <EditText
+            android:id="@+id/editacti_edtstarttime"
+            android:drawableLeft="@drawable/time24_icon"
+            android:drawablePadding="20dp"
+            android:hint="Bắt đầu"
+            android:gravity="left|top"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:textColor="#5a5a5a"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edt_cv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/editcvacti_w3"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#eb3b41"
+            android:text="Không được để trống."/>
+
+        <EditText
+            android:id="@+id/editacti_edtendtime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edt_cv2"
+            android:drawableLeft="@drawable/time24_icon"
+            android:drawablePadding="20dp"
+            android:gravity="left|top"
+            android:hint="Kết thúc"
+            android:lineSpacingExtra="5dp"
+            android:padding="10dp"
+            android:textColor="#5a5a5a"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/editcvacti_w4"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#eb3b41"
+            android:text="Không được để trống."/>
+        <EditText
+            android:id="@+id/editacti_edtdesc"
+            android:hint="Mô tả chi tiết"
+            android:gravity="left|top"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:textColor="#5a5a5a"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edt_cv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="150dp"/>
+        <TextView
+            android:id="@+id/editcvacti_w5"
+            android:visibility="gone"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#eb3b41"
+            android:text="Không được để trống."/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_marginBottom="20dp"
+            android:id="@+id/editcvacti_cancel"
+            android:layout_gravity="end|bottom"
+            android:textStyle="bold"
+            android:background="@drawable/tv_btn_cancel"
+            android:layout_marginLeft="10dp"
+            android:textColor="#fa6164"
+            android:textAllCaps="true"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Hủy"
+            tools:ignore="RtlCompat" />
+        <TextView
+            android:id="@+id/editcvacti_save2"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="@drawable/tv_btn_save"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lưu"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="15dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight = "0dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/dinalog_img"
+            android:background="@drawable/circle_camera"
+            android:padding="15dp"
+            android:layout_width="60dp"
+            app:riv_corner_radius="50dp"
+            android:layout_height="60dp"
+            android:src="@drawable/mayanh"/>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/dinalog_tv_name"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:text="Nguyễn Văn A"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:textAlignment="center"
+                android:id="@+id/dinalog_tv_work"
+                android:textAllCaps="true"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kĩ sư phần mềm" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/close_bottomsheetCV"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close36_icon"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dinalog_tv_commu"
+        android:layout_marginBottom="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/tv_cv"
+        android:padding="10dp"
+        android:text="Thông tin liên hệ"
+        android:textAlignment="center"
+        android:textColor="#eb3d51"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/dinalog_tv_target"
+        android:layout_marginBottom="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/tv_cv"
+        android:padding="10dp"
+        android:text="Mục tiêu nghề nghiệp"
+        android:textAlignment="center"
+        android:textColor="#eb3d51"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/dinalog_tv_skills"
+        android:layout_marginBottom="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/tv_cv"
+        android:padding="10dp"
+        android:text="Các kĩ năng"
+        android:textAlignment="center"
+        android:textColor="#eb3d51"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/dinalog_tv_edu"
+        android:layout_marginBottom="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/tv_cv"
+        android:padding="10dp"
+        android:text="Học vấn"
+        android:textAlignment="center"
+        android:textColor="#eb3d51"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/dinalog_tv_exper"
+        android:layout_marginBottom="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/tv_cv"
+        android:padding="10dp"
+        android:text="Kinh nghiệm"
+        android:textAlignment="center"
+        android:textColor="#eb3d51"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/dinalog_tv_acti"
+        android:layout_marginBottom="10dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/tv_cv"
+        android:padding="10dp"
+        android:text="Hoạt động"
+        android:textAlignment="center"
+        android:textColor="#eb3d51"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/dinalog_tv_prize"
+        android:layout_marginBottom="30dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/tv_cv"
+        android:padding="10dp"
+        android:text="Giải thưởng"
+        android:textAlignment="center"
+        android:textColor="#eb3d51"
+        android:textStyle="bold" />
+
+</LinearLayout>

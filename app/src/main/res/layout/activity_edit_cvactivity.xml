@@ -1,423 +1,439 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.EditCVActivity"
-    android:orientation="vertical">
+    >
 
-    <RelativeLayout
-        android:background="@drawable/tool_bar_border"
-        android:padding="16dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/editcv_tv_cancle"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hủy"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/editcv_tv_title"
+                android:textSize="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Tạo CV"/>
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/editcv_tv_title"
+                android:layout_marginLeft="80dp"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:id="@+id/editcv_tv_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lưu"/>
+        </RelativeLayout>
+
         <TextView
-            android:layout_centerVertical="true"
-            android:id="@+id/editcv_tv_cancle"
-            android:textSize="18dp"
-            android:textColor="@color/black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hủy"/>
-        <TextView
+            android:id="@+id/tv_edit_cv"
             android:textStyle="bold"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/editcv_tv_title"
-            android:textSize="24dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Tạo CV"/>
-        <TextView
-            android:layout_centerVertical="true"
-            android:layout_toEndOf="@+id/editcv_tv_title"
-            android:layout_marginLeft="80dp"
-            android:textColor="@color/black"
-            android:textSize="18dp"
-            android:id="@+id/editcv_tv_save"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lưu"/>
-    </RelativeLayout>
-
-    <ScrollView
-        android:fillViewport="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <LinearLayout
-            android:layout_weight="10"
-            android:layout_marginBottom="20dp"
-            android:id="@+id/my_cv"
+            android:background="#eb3d51"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/border_cv"
-            android:orientation="horizontal"
-            android:paddingLeft="5dp"
-            android:paddingTop="15dp"
-            android:paddingRight="5dp"
-            android:paddingBottom="40dp">
+            android:padding="10dp"
+            android:text="Chỉnh sửa nội dung"
+            android:textAlignment="center" />
 
+        <ScrollView
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_weight="10"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/my_cv"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <com.makeramen.roundedimageview.RoundedImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:padding="5dp"
-                    android:src="@drawable/demo2"
-                    app:riv_corner_radius="50dp" />
-
-                <TextView
-                    android:id="@+id/editcv_tv_nameuser"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="2dp"
-                    android:gravity="center"
-                    android:text="NGUYỄN VĂN A"
-                    android:textColor="@color/black"
-                    android:textSize="6sp"
-                    android:textStyle="bold" />
-                <!--            -->
-                <TextView
-                    android:id="@+id/editcv_tv_jobuser"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:gravity="center"
-                    android:text="Kĩ sư phần mềm"
-                    android:textColor="@color/black"
-                    android:textSize="6sp" />
-                <!--            -->
-                <View
-                    android:layout_width="32dp"
-                    android:layout_height="5dp"
-                    android:background="#a4e4c2" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-11dp"
-                    android:text="Thông tin liên hệ"
-                    android:textColor="@color/black"
-                    android:textSize="6sp"
-                    android:textStyle="bold" />
+                android:background="@drawable/border_cv"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingTop="15dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="40dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:orientation="horizontal">
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
                     <com.makeramen.roundedimageview.RoundedImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:padding="2dp"
-                        android:src="@drawable/calendar_icon18"
-                        android:background="@drawable/circle_icon"
+                        android:id="@+id/imgview_cv"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/demo2"
                         app:riv_corner_radius="50dp" />
 
                     <TextView
-                        android:id="@+id/editcv_tv_birthdate"
-                        android:layout_gravity="center_vertical"
+                        android:id="@+id/editcv_tv_nameuser"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:drawableTint="@color/black"
-                        android:text="26/04/2003"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:gravity="center"
+                        android:text="NGUYỄN VĂN A"
+                        android:textColor="@color/black"
+                        android:textSize="6sp"
+                        android:textStyle="bold" />
+                    <!--            -->
+                    <TextView
+                        android:id="@+id/editcv_tv_jobuser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:gravity="center"
+                        android:text="Kĩ sư phần mềm"
+                        android:textColor="@color/black"
                         android:textSize="6sp" />
-                </LinearLayout>
+                    <!--            -->
+                    <View
+                        android:layout_width="32dp"
+                        android:layout_height="5dp"
+                        android:background="#a4e4c2" />
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-11dp"
+                        android:text="Thông tin liên hệ"
+                        android:textColor="@color/black"
+                        android:textSize="6sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:padding="2dp"
+                            android:src="@drawable/calendar_icon18"
+                            android:background="@drawable/circle_icon"
+                            app:riv_corner_radius="50dp" />
+
+                        <TextView
+                            android:id="@+id/editcv_tv_birthdate"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:drawableTint="@color/black"
+                            android:text="26/04/2003"
+                            android:textSize="6sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:padding="2dp"
+                            android:src="@drawable/call_icon18"
+                            android:background="@drawable/circle_icon"
+                            app:riv_corner_radius="50dp" />
+
+                        <TextView
+                            android:id="@+id/editcv_tv_pn"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:drawableTint="@color/black"
+                            android:text="0976134251"
+                            android:textSize="6sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:padding="2dp"
+                            android:src="@drawable/email_icon18"
+                            android:background="@drawable/circle_icon"
+                            app:riv_corner_radius="50dp" />
+
+                        <TextView
+                            android:id="@+id/editcv_tv_email"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:drawableTint="@color/black"
+                            android:text="thietdong264@gmail.com"
+                            android:textSize="6sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:padding="2dp"
+                            android:src="@drawable/link_icon18"
+                            android:background="@drawable/circle_icon"
+                            app:riv_corner_radius="50dp" />
+
+                        <TextView
+                            android:id="@+id/editcv_tv_linkfb"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:drawableTint="@color/black"
+                            android:text="http://fb.com/thietvu"
+                            android:textSize="6sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:padding="2dp"
+                            android:src="@drawable/home_icon18"
+                            android:background="@drawable/circle_icon"
+                            app:riv_corner_radius="50dp" />
+
+                        <TextView
+                            android:id="@+id/editcv_tv_address"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:drawableTint="@color/black"
+                            android:text="Ngõ 88 Giáp Nhị"
+                            android:textSize="6sp" />
+                    </LinearLayout>
+
+                    <!--            -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:padding="2dp"
+                            android:src="@drawable/calendar_icon18"
+                            android:background="@drawable/circle_icon"
+                            app:riv_corner_radius="50dp" />
+
+                        <TextView
+                            android:id="@+id/editcv_tv_gender"
+                            android:layout_gravity="center_vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:drawableTint="@color/black"
+                            android:text="Nam"
+                            android:textSize="6sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="32dp"
+                        android:layout_height="5dp"
+                        android:background="#fdda86" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-10dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="Mục tiêu nghề nghiệp"
+                        android:textColor="@color/black"
+                        android:textSize="6sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/editcv_tv_target"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="18dp"
+                        android:text="Là sinh viên mới tốt nghiệp ra trường với chuyên ngành Hệ thống Thông tin Quản lý, nắm vững các kiến thức, kỹ năng chuyên môn. Tôi mong muốn được vào làm việc tại công ty với vị trí nhân viên phân tích hệ thống, có thể vận dụng những kiến thức đã được trau dồi và không ngừng học hỏi để phát triển bản thân, cũng như hoàn thành tốt nhất công việc được giao."
+                        android:textSize="6sp" />
+
+                    <View
+                        android:layout_width="32dp"
+                        android:layout_height="5dp"
+                        android:background="#bdc9fd" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-11dp"
+                        android:text="Các kĩ năng"
+                        android:textColor="@color/black"
+                        android:textSize="6sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_skill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp" />
+
+
+                </LinearLayout>
 
                 <LinearLayout
+                    android:layout_weight="2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
-
-                    <com.makeramen.roundedimageview.RoundedImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:padding="2dp"
-                        android:src="@drawable/call_icon18"
-                        android:background="@drawable/circle_icon"
-                        app:riv_corner_radius="50dp" />
-
+                    android:orientation="vertical">
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:layout_width="32dp"
+                        android:layout_height="5dp"
+                        android:background="#ade4f8" />
                     <TextView
-                        android:id="@+id/editcv_tv_pn"
-                        android:layout_gravity="center_vertical"
+                        android:textSize="6sp"
+                        android:layout_marginTop="-10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="Học vấn"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_education"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:drawableTint="@color/black"
-                        android:text="0976134251"
-                        android:textSize="6sp" />
-                </LinearLayout>
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:nestedScrollingEnabled="false" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
-
-                    <com.makeramen.roundedimageview.RoundedImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:padding="2dp"
-                        android:src="@drawable/email_icon18"
-                        android:background="@drawable/circle_icon"
-                        app:riv_corner_radius="50dp" />
-
+                    <View
+                        android:layout_marginTop="5dp"
+                        android:layout_width="32dp"
+                        android:layout_height="5dp"
+                        android:background="#fbd8d4" />
                     <TextView
-                        android:id="@+id/editcv_tv_email"
-                        android:layout_gravity="center_vertical"
+                        android:textSize="6sp"
+                        android:layout_marginTop="-10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="Kinh nghiệm làm việc"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_experience"
+                        android:layout_width="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:layout_width="32dp"
+                        android:layout_height="5dp"
+                        android:background="#dbdbdb" />
+                    <TextView
+                        android:textSize="6sp"
+                        android:layout_marginTop="-10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:text="Hoạt động"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_activity"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <View
+                        android:layout_marginTop="10dp"
+                        android:layout_width="32dp"
+                        android:layout_height="5dp"
+                        android:background="#feebff" />
+                    <TextView
+                        android:textSize="6sp"
+                        android:layout_marginTop="-11dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="7dp"
+                        android:text="Giải thưởng"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcv_certificate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:drawableTint="@color/black"
-                        android:text="thietdong264@gmail.com"
-                        android:textSize="6sp" />
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="5dp"/>
+
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
-
-                    <com.makeramen.roundedimageview.RoundedImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:padding="2dp"
-                        android:src="@drawable/link_icon18"
-                        android:background="@drawable/circle_icon"
-                        app:riv_corner_radius="50dp" />
-
-                    <TextView
-                        android:id="@+id/editcv_tv_linkfb"
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:drawableTint="@color/black"
-                        android:text="http://fb.com/thietvu"
-                        android:textSize="6sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="horizontal">
-
-                    <com.makeramen.roundedimageview.RoundedImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:padding="2dp"
-                        android:src="@drawable/home_icon18"
-                        android:background="@drawable/circle_icon"
-                        app:riv_corner_radius="50dp" />
-
-                    <TextView
-                        android:id="@+id/editcv_tv_address"
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:drawableTint="@color/black"
-                        android:text="Ngõ 88 Giáp Nhị"
-                        android:textSize="6sp" />
-                </LinearLayout>
-
-                <!--            -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="20dp"
-                    android:orientation="horizontal">
-
-                    <com.makeramen.roundedimageview.RoundedImageView
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:padding="2dp"
-                        android:src="@drawable/calendar_icon18"
-                        android:background="@drawable/circle_icon"
-                        app:riv_corner_radius="50dp" />
-
-                    <TextView
-                        android:id="@+id/editcv_tv_gender"
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="7dp"
-                        android:drawableTint="@color/black"
-                        android:text="Nam"
-                        android:textSize="6sp" />
-                </LinearLayout>
-
-                <View
-                    android:layout_width="32dp"
-                    android:layout_height="5dp"
-                    android:background="#fdda86" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-10dp"
-                    android:layout_marginBottom="4dp"
-                    android:text="Mục tiêu nghề nghiệp"
-                    android:textColor="@color/black"
-                    android:textSize="6sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/editcv_tv_target"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginBottom="18dp"
-                    android:text="Áp dụng những kinh nghiệm về kĩ năng bán hàng và sự hiểu biết về thị trường để trở thành một nhân viên bán hàng chuyên nghiệp"
-                    android:textSize="6sp" />
-
-                <View
-                    android:layout_width="32dp"
-                    android:layout_height="5dp"
-                    android:background="#bdc9fd" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="-11dp"
-                    android:text="Các kĩ năng"
-                    android:textColor="@color/black"
-                    android:textSize="6sp"
-                    android:textStyle="bold" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcv_skill"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="10dp" />
 
 
             </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <include layout="@layout/addcv_bottomsheet"/>
 
-            <LinearLayout
-                android:layout_weight="2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <View
-                    android:layout_marginTop="10dp"
-                    android:layout_width="32dp"
-                    android:layout_height="5dp"
-                    android:background="#ade4f8" />
-                <TextView
-                    android:textSize="6sp"
-                    android:layout_marginTop="-10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:text="Học vấn"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:nestedScrollingEnabled="false"
-                    android:id="@+id/rcv_education"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-
-                <View
-                    android:layout_marginTop="5dp"
-                    android:layout_width="32dp"
-                    android:layout_height="5dp"
-                    android:background="#fbd8d4" />
-                <TextView
-                    android:textSize="6sp"
-                    android:layout_marginTop="-10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:text="Kinh nghiệm làm việc"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcv_experience"
-                    android:layout_width="match_parent"
-                    android:layout_marginBottom="2dp"
-                    android:layout_marginTop="1dp"
-                    android:layout_height="wrap_content"/>
-
-                <View
-                    android:layout_marginTop="10dp"
-                    android:layout_width="32dp"
-                    android:layout_height="5dp"
-                    android:background="#dbdbdb" />
-                <TextView
-                    android:textSize="6sp"
-                    android:layout_marginTop="-10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="1dp"
-                    android:text="Hoạt động"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcv_activity"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-
-                <View
-                    android:layout_marginTop="10dp"
-                    android:layout_width="32dp"
-                    android:layout_height="5dp"
-                    android:background="#feebff" />
-                <TextView
-                    android:textSize="6sp"
-                    android:layout_marginTop="-11dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="7dp"
-                    android:text="Chứng chỉ"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcv_certificate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginBottom="5dp"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-    </ScrollView>
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

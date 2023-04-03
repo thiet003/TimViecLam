@@ -1,6 +1,8 @@
 package com.example.timviec.Model;
 
-public class Experience {
+import java.io.Serializable;
+
+public class Experience implements Serializable {
     String experience_company,experience_time,experience_service,experience_detail;
 
     public String getExperience_company() {

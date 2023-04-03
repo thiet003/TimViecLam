@@ -193,22 +193,23 @@
                 android:background="@drawable/spinner"/>
 
         </LinearLayout>
+
         <Button
             android:id="@+id/btn_saveprofile"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            app:backgroundTint = "@null"
-            android:background="@drawable/btn_save"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:padding="10dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_save"
+            android:padding="10dp"
             android:text="Lưu"
+            android:textSize="16sp"
+            android:textStyle="bold"
 
-            android:layout_height="wrap_content"/>
+            app:backgroundTint="@null" />
     </LinearLayout>
 
     <include layout="@layout/layout_bottom_sheet"/>

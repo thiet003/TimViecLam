@@ -98,7 +98,7 @@
 
     </LinearLayout>
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
@@ -106,18 +106,71 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:id="@+id/person_card_introduce"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="3dp"
                 app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Giới thiệu bản thân"
+                            android:textColor="#000000"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/person_icon_editIntroduce"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="142dp"
+                            android:text="Sửa"
+                            android:textColor="@color/colorapp"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/person_txt_introduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Chưa cập nhật"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dddddd"/>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/person_card_exprience"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                >
 
                 <LinearLayout
                     android:paddingBottom="10dp"
@@ -127,284 +180,237 @@
                     android:orientation="vertical"
                     >
                     <LinearLayout
-                        android:layout_marginBottom="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <TextView
                             android:layout_width="wrap_content"
                             android:textStyle="bold"
-                            android:textSize="20dp"
-                            android:textColor="#000000"
-                            android:layout_height="wrap_content"
-                            android:text="Giới thiệu bản thân"/>
-                        <ImageView
-                            android:id="@+id/person_icon_editIntroduce"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="115dp"
-                            android:layout_width="23dp"
-                            android:layout_height="23dp"
-                            android:src="@drawable/edit18_icon"
-                            app:tint="#22a0d6" />
-                    </LinearLayout>
-                    <TextView
-                        android:id="@+id/person_txt_introduceADD"
-                        android:drawableLeft="@drawable/add_icon"
-                        android:drawableTint="#f051ab"
-                        android:layout_marginLeft="5dp"
-                        android:drawablePadding="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_marginRight="20dp"
-                        android:layout_height="wrap_content"
-                        android:text="Thêm giới thiệu"
-                        android:textStyle="bold"
-                        android:textSize="16dp"
-                        android:textColor="#f051ab"
-                        />
-                    <TextView
-                        android:layout_marginLeft="5dp"
-                        android:id="@+id/person_txt_introduce"
-                        android:layout_width="match_parent"
-                        android:layout_marginRight="50dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/person_card_exprience"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="3dp"
-                app:cardUseCompatPadding="true">
-
-                <LinearLayout
-                    android:layout_marginLeft="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-                    <LinearLayout
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:textColor="#000000"
                             android:layout_height="wrap_content"
                             android:text="Kinh nghiệm làm việc"/>
-                        <ImageView
+
+                        <TextView
                             android:id="@+id/person_icon_editExprience"
-                            android:layout_marginLeft="88dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_width="23dp"
-                            android:layout_height="23dp"
-                            android:src="@drawable/edit18_icon"
-
-                            app:tint="#22a0d6" />
+                            android:layout_marginLeft="125dp"
+                            android:text="Sửa"
+                            android:textColor="@color/colorapp"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
                     <TextView
-                        android:id="@+id/person_txt_exprience"
-                        android:drawableLeft="@drawable/add_icon"
-                        android:drawableTint="#f051ab"
-                        android:layout_marginLeft="5dp"
-                        android:drawablePadding="10dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Thêm kinh nghiệm"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
                         android:textStyle="bold"
-                        android:textSize="16dp"
-                        android:textColor="#f051ab"
+                        android:text="Chưa cập nhật"
+                        android:layout_marginLeft="5dp"
+                        android:id="@+id/person_txt_exp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ed5209"
                         />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/person_card_education"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp"
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dddddd"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:id="@+id/person_card_addresssub"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="3dp"
-                app:cardUseCompatPadding="true">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:layout_marginLeft="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:orientation="vertical"
-                    >
+                    android:paddingBottom="10dp">
+
                     <LinearLayout
-                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
                         <TextView
                             android:layout_width="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="20dp"
-                            android:textColor="#000000"
                             android:layout_height="wrap_content"
-                            android:text="Học vấn"/>
-                        <ImageView
-                            android:id="@+id/person_icon_editEducation"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="205dp"
-                            android:layout_width="23dp"
-                            android:layout_height="23dp"
-                            android:src="@drawable/edit18_icon"
+                            android:text="Địa điểm làm việc mong muốn"
+                            android:textColor="#000000"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
 
-                            app:tint="#22a0d6" />
+                        <TextView
+                            android:id="@+id/person_icon_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="50dp"
+                            android:text="Sửa"
+                            android:textColor="@color/colorapp"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
                     </LinearLayout>
+
                     <TextView
-                        android:id="@+id/person_txt_education"
-                        android:drawableLeft="@drawable/add_icon"
-                        android:drawableTint="#f051ab"
-                        android:layout_marginLeft="5dp"
-                        android:drawablePadding="10dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:id="@+id/person_txt_addresssub"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Thêm học vấn"
-                        android:textStyle="bold"
-                        android:textSize="16dp"
-                        android:textColor="#f051ab"
-                        />
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Chưa cập nhật"
+                        android:textColor="#ed5209"
+                        android:textStyle="bold"/>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/person_card_skill"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp"
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dddddd"/>
+            <LinearLayout
+                android:paddingBottom="15dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/person_card_count"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="3dp"
-                app:cardUseCompatPadding="true">
+                android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:layout_marginLeft="20dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-                    <LinearLayout
-                        android:layout_marginTop="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="20dp"
-                            android:textColor="#000000"
-                            android:layout_height="wrap_content"
-                            android:text="Kĩ năng"/>
-                        <ImageView
-                            android:id="@+id/person_icon_editSkill"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="205dp"
-                            android:layout_width="23dp"
-                            android:layout_height="23dp"
-                            android:src="@drawable/edit18_icon"
-
-                            app:tint="#22a0d6" />
-                    </LinearLayout>
-                    <TextView
-                        android:id="@+id/person_txt_skill"
-                        android:drawableLeft="@drawable/add_icon"
-                        android:drawableTint="#f051ab"
-                        android:layout_marginLeft="5dp"
-                        android:drawablePadding="10dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Thêm kĩ năng"
-                        android:textStyle="bold"
-                        android:textSize="16dp"
-                        android:textColor="#f051ab"
-                        />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/person_card_prize"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="20dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="3dp"
-                app:cardUseCompatPadding="true">
-
-                <LinearLayout
                     android:layout_marginLeft="20dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    >
+                    android:paddingBottom="10dp">
+
                     <LinearLayout
-                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="20dp">
+
                         <TextView
                             android:layout_width="wrap_content"
-                            android:textStyle="bold"
-                            android:textSize="20dp"
-                            android:textColor="#000000"
                             android:layout_height="wrap_content"
-                            android:text="Giải thưởng"/>
-                        <ImageView
-                            android:id="@+id/person_icon_editPrize"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="170dp"
-                            android:layout_width="23dp"
-                            android:layout_height="23dp"
-                            android:src="@drawable/edit18_icon"
-
-                            app:tint="#22a0d6" />
+                            android:text="Quản lí tìm việc"
+                            android:textColor="#000000"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
                     </LinearLayout>
-                    <TextView
-                        android:id="@+id/person_txt_prize"
-                        android:drawableLeft="@drawable/add_icon"
-                        android:drawableTint="#f051ab"
-                        android:layout_marginLeft="5dp"
-                        android:drawablePadding="10dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Thêm giải thưởng"
-                        android:textStyle="bold"
-                        android:textSize="16dp"
-                        android:textColor="#f051ab"
-                        />
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/card_cv"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginBottom="10dp"
+                                android:background="@drawable/circle_icon2"
+                                android:padding="4dp"
+                                android:src="@drawable/bagw18_icon"
+                                app:riv_corner_radius="50dp" />
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="12dp"
+                                    android:textColor="@color/colorBlack"
+                                    android:text="Việc làm đã ứng tuyển"
+                                    android:layout_width="100dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="15dp"
+                                    />
+                                <TextView
+                                    android:id="@+id/person_cntJR"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorapp"
+                                    android:text="0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+<!--                        -->
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/card_cv"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:padding="4dp"
+                                android:src="@drawable/tymw_icon"
+                                android:background="@drawable/circle_icon2"
+                                app:riv_corner_radius="50dp" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:textSize="12dp"
+                                    android:textColor="@color/colorBlack"
+                                    android:text="Việc làm đã yêu thích"
+                                    android:layout_width="100dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginRight="15dp"
+                                    />
+                                <TextView
+                                    android:id="@+id/person_cntJF"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/colorapp"
+                                    android:text="0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
         </LinearLayout>
 
     </ScrollView>
