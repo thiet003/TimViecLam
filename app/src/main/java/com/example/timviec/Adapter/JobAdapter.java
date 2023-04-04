@@ -171,7 +171,12 @@ public class JobAdapter extends RecyclerView.Adapter<JobAdapter.JobViewHolder> i
                     List<Job> list = new ArrayList<>();
                     for(Job job : mListJobOld)
                     {
-                        if(job.getName().toLowerCase().contains(strSearch.toLowerCase()))
+                        boolean check1 = job.getName().toLowerCase().contains(strSearch.toLowerCase());
+                        boolean check2 = job.getAddress().toLowerCase().contains(strSearch.toLowerCase());
+                        boolean check3 = job.getSalary().toLowerCase().contains(strSearch.toLowerCase());
+                        boolean check4 = job.getCompany().toLowerCase().contains(strSearch.toLowerCase());
+                        boolean check5 = job.getUpdateTime().toLowerCase().contains(strSearch.toLowerCase());
+                        if(check1 || check2 || check3 || check4 || check5)
                         {
                             list.add(job);
                         }

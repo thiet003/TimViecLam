@@ -34,7 +34,7 @@
                 android:padding="10dp"
                 android:id="@+id/person_btn_editInfo"
                 android:drawableLeft="@drawable/edit18_icon"
-                android:drawableTint="#ffffff"
+                android:drawableTint="@color/white"
                 android:textColor="@color/white"
                 android:layout_marginLeft="135dp"
                 android:background="@drawable/btn_resets"

@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements IClickRecuimentJo
                 return true;
             }
         });
+        
         DataFromInternet dataFromInternet = new DataFromInternet(new DataFromInternet.ICPutData() {
             @Override
             public void putToFragment(List<Job> list) {
