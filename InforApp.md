@@ -61,9 +61,13 @@ Cụ thể là:
 ### IV. Các công nghệ sử dụng
 
 **1. RecyclerView:** hiện thị danh sách động như danh sách việc làm, kĩ năng, kinh nghiệm, hoạt động,...
+
 **2. RoomDataBase:** RoomDataBase giúp lưu và truy vấn cơ sở dữ liệu như Job, User,...
+
 **3. Jsoup:** Jsoup dùng để lấy dữ liệu từ các trang web, ở ứng dụng này đã áp dụng Jsoup để lấy dữ liệu thông tin việc làm từ các trang tuyển dụng uy tín.
+
 **4. PDFDocument:** dùng để lưu trữ CV dưới dạng PDF.
+
 
 ### V. Cách sử dụng ứng dụng
 
